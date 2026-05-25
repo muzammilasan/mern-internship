@@ -14,7 +14,7 @@
     <div>
       <button class="op" onclick="clearDisplay()" id="clear">C</button>
       <button class="op" onclick="backspace()" id="backspace">⌫</button>
-      <button>⠀</button>
+      <button>🖩</button>
       <button class="op" onclick="updateDisplay('/')" id="divide">/</button>
       <br />
 
@@ -36,7 +36,8 @@
       <button class="op" onclick="updateDisplay('+')" id="add">+</button>
       <br />
 
-      <button>⠀</button>
+      <button onclick="updateDisplay('(')" id="lb">(</button>
+      <button onclick="updateDisplay(')')" id="rb">)</button>
       <button onclick="updateDisplay(0)" id="zero">0</button>
       <button onclick="updateDisplay('.')" id="point">.</button>
       <button onclick="equal()" id="equal">=</button>
