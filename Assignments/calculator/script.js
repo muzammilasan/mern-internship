@@ -10,6 +10,7 @@ function backspace() {
     display.innerText = "0";
   }
 }
+let frac = 0;
 function updateDisplay(val) {
   if (display.innerText == "0") {
     display.innerText = val;
@@ -22,7 +23,14 @@ function updateDisplay(val) {
       display.innerText += val;
     }
   }
+  if (display.innerText.includes("/")) {
+    frac = 1;
+  }
 }
 function equal() {
-  display.innerText = eval(display.innerText);
+  if (frac) {
+    display.innerText = eval(display.innerText).toFixed(3);
+  } else {
+    display.innerText = eval(display.innerText);
+  }
 }
