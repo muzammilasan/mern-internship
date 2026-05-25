@@ -14,7 +14,13 @@ function updateDisplay(val) {
   if (display.innerText == "0") {
     display.innerText = val;
   } else {
-    display.innerText += val;
+    if ("+-*/.".includes(display.innerText.slice(-1))) {
+      if (!"+-*/.".includes(val)) {
+        display.innerText += val;
+      }
+    } else {
+      display.innerText += val;
+    }
   }
 }
 function equal() {
